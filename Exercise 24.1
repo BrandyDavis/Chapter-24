@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+
+    public class CreatingArray {
+
+	public static void main(String[] args) {
+		
+			
+	  ArrayList collection1 = new ArrayList();
+	  collection1.add("Tom");
+	  collection1.add("George");
+	  collection1.add("Peter");
+  	  collection1.add("Jean");
+	  collection1.add("Jane");
+				
+				 
+	  ArrayList<String> collection1A = (ArrayList<String>)collection1.clone();
+      ArrayList<String> collection1B = (ArrayList<String>)collection1.clone();
+				    
+	  ArrayList collection2 = new ArrayList();
+	  collection2.add("Tom");
+	  collection2.add("George");
+	  collection2.add("Michael");
+      collection2.add("Michelle");
+	  collection2.add("Daniel");
+			  
+	  System.out.println("List 1 :" + collection1);
+	  System.out.println("\nList 2 :" + collection2);
+			    
+			   
+	  collection1.addAll(collection2);
+			
+	  System.out.println("\nAfter Add All - List1 :"+ collection1);
+      System.out.println("After Add All - List2: "+ collection2);						
+												
+	  collection1B.removeAll(collection2);
+				
+	  System.out.println("\nAfter Remove All - (Deletes name from list 1 if matches list 2)\nList 1 :" + collection1B);
+	  System.out.println("List 2 :" + collection2);
+				 
+	 collection1A.retainAll(collection2);
+				
+	 System.out.println("\nAfter Retain All - (Deletes name from list 1 if not matches list 2)\nList 1:" + collection1A);
+	 System.out.println("After Retain All List 2:" + collection2);
+				
+			    
+	}
+
+}
+		
